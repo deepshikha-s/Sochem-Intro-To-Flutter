@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class CalculatorScreen extends StatefulWidget {
   const CalculatorScreen({super.key});
@@ -12,7 +10,6 @@ class CalculatorScreen extends StatefulWidget {
 class _CalculatorScreenState extends State<CalculatorScreen> {
   dynamic num1 = 0;
   dynamic num2 = 0;
-  //dynamic disptext = "";
   dynamic res = '';
   dynamic op = '';
 
@@ -21,20 +18,20 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        title: Text("Calculator"),
+        title: const Text("Calculator"),
         backgroundColor: Colors.black,
       ),
       body: Padding(
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Padding(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: Text(
                 '$res',
                 textAlign: TextAlign.right,
-                style: TextStyle(color: Colors.white, fontSize: 100),
+                style: const TextStyle(color: Colors.white, fontSize: 100),
               ),
             ),
             Row(
@@ -52,7 +49,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                         op = '';
                         setState(() {});
                       },
-                      child: Text(
+                      child: const Text(
                         "AC",
                         style: TextStyle(color: Colors.black, fontSize: 25),
                       ),
@@ -63,10 +60,9 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                     child: FloatingActionButton(
                       backgroundColor: Colors.white70,
                       onPressed: () {},
-                      child: Icon(
+                      child: const Icon(
                         Icons.add_task,
                         size: 30,
-                        //color: Colors.black,
                       ),
                     )),
                 SizedBox(
@@ -75,10 +71,9 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                     child: FloatingActionButton(
                       backgroundColor: Colors.white70,
                       onPressed: () {},
-                      child: Icon(
+                      child: const Icon(
                         Icons.add_task,
                         size: 30,
-                        //color: Colors.black,
                       ),
                     )),
                 SizedBox(
@@ -89,7 +84,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                       onPressed: () {
                         op = '/';
                       },
-                      child: Text(
+                      child: const Text(
                         "/",
                         style: TextStyle(color: Colors.white, fontSize: 45),
                       ),
@@ -111,7 +106,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                           num2 = 7;
                         }
                       },
-                      child: Text(
+                      child: const Text(
                         "7",
                         style: TextStyle(color: Colors.white, fontSize: 35),
                       ),
@@ -128,7 +123,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                           num2 = 8;
                         }
                       },
-                      child: Text(
+                      child: const Text(
                         "8",
                         style: TextStyle(color: Colors.white, fontSize: 35),
                       ),
@@ -145,7 +140,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                             num2 = 9;
                           }
                         },
-                        child: Text(
+                        child: const Text(
                           "9",
                           style: TextStyle(color: Colors.white, fontSize: 35),
                         ))),
@@ -157,7 +152,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                       onPressed: () {
                         op = '*';
                       },
-                      child: Text(
+                      child: const Text(
                         "*",
                         style: TextStyle(color: Colors.white, fontSize: 45),
                       ),
@@ -179,7 +174,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                           num2 = 4;
                         }
                       },
-                      child: Text(
+                      child: const Text(
                         "4",
                         style: TextStyle(color: Colors.white, fontSize: 35),
                       ),
@@ -196,7 +191,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                           num2 = 5;
                         }
                       },
-                      child: Text(
+                      child: const Text(
                         "5",
                         style: TextStyle(color: Colors.white, fontSize: 35),
                       ),
@@ -213,7 +208,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                             num2 = 6;
                           }
                         },
-                        child: Text(
+                        child: const Text(
                           "6",
                           style: TextStyle(color: Colors.white, fontSize: 35),
                         ))),
@@ -225,7 +220,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                       onPressed: () {
                         op = '-';
                       },
-                      child: Text(
+                      child: const Text(
                         "-",
                         style: TextStyle(color: Colors.white, fontSize: 45),
                       ),
@@ -247,7 +242,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                           num2 = 1;
                         }
                       },
-                      child: Text(
+                      child: const Text(
                         "1",
                         style: TextStyle(color: Colors.white, fontSize: 35),
                       ),
@@ -264,7 +259,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                           num2 = 2;
                         }
                       },
-                      child: Text(
+                      child: const Text(
                         "2",
                         style: TextStyle(color: Colors.white, fontSize: 35),
                       ),
@@ -281,7 +276,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                             num2 = 3;
                           }
                         },
-                        child: Text(
+                        child: const Text(
                           "3",
                           style: TextStyle(color: Colors.white, fontSize: 35),
                         ))),
@@ -293,7 +288,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                       onPressed: () {
                         op = '+';
                       },
-                      child: Text(
+                      child: const Text(
                         "+",
                         style: TextStyle(color: Colors.white, fontSize: 45),
                       ),
@@ -309,7 +304,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                     child: FloatingActionButton(
                       backgroundColor: Colors.white24,
                       onPressed: () {},
-                      child: Text(
+                      child: const Text(
                         ".",
                         style: TextStyle(color: Colors.white, fontSize: 50),
                       ),
@@ -326,7 +321,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                           num2 = 0;
                         }
                       },
-                      child: Text(
+                      child: const Text(
                         "0",
                         style: TextStyle(color: Colors.white, fontSize: 35),
                       ),
@@ -337,7 +332,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                     child: FloatingActionButton(
                       backgroundColor: Colors.white24,
                       onPressed: () {},
-                      child: Icon(
+                      child: const Icon(
                         Icons.backspace,
                         color: Colors.white,
                       ),
@@ -363,7 +358,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                         }
                         setState(() {});
                       },
-                      child: Text(
+                      child: const Text(
                         "=",
                         style: TextStyle(color: Colors.white, fontSize: 45),
                       ),
